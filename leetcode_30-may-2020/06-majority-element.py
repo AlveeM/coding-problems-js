@@ -2,7 +2,7 @@
 class Solution:
     def majorityElement(self, nums: [int]) -> int:
         idx = 0
-        count = 1;
+        count = 1
 
         for i in range(1, len(nums)):
             if nums[i] == nums[idx]:
