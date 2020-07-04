@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\Alvee\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+    "python.pythonPath": "/Users/alvee/.pyenv/versions/3.8.3/bin/python",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "python.linting.mypyEnabled": false
