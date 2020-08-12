@@ -20,9 +20,8 @@ def check_permutation(str1, str2):
 
 #     for char in str1:
 #         counter[char] = counter.get(char, 0) + 1
-#     print(counter)
 #     for char in str2:
-#         if char not in counter:
+#         if char not in counter or counter[char] == 0:
 #             return False
 #         counter[char] -= 1
 
