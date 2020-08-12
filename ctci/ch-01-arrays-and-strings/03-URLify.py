@@ -20,13 +20,14 @@ def urlify(str_list, true_str_len):
 # TC: O(n) 
 # SC: O(n)
 # def urlify(str_list, true_str_len):
-#     new_str = ""
+#     new_str = []
 #     for i in range(true_str_len):
 #         if str_list[i] == ' ':
-#             new_str += '%20'
+#             new_str.extend(['%', '2', '0'])
 #         else:
-#             new_str += str_list[i]
-#     return list(new_str)
+#             new_str.append(str_list[i])
+
+#     return new_str
 
 class Test(unittest.TestCase):
     '''Test Cases'''
