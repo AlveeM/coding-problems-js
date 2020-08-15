@@ -2,10 +2,7 @@ import unittest
 
 # TC: O(n log n)
 def check_permutation(str1, str2):
-    str1_len = len(str1)
-    str2_len = len(str2)
-
-    if str1_len != str2_len: return False 
+    if len(str1) != len(str2): return False 
 
     str1_sorted = ''.join(sorted(str1))
     str2_sorted = ''.join(sorted(str2))
