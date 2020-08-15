@@ -1,6 +1,6 @@
 import unittest
 
-# TC: O(n)
+# TC: O(n) (could be argued O(1) since iteration is limited to 128 times)
 # SC: O(1)
 def is_unique(string):
     # character set is in ASCII (128 characters)
@@ -33,13 +33,13 @@ def is_unique(string):
 # TC: O(n)
 # SC: O(n)
 # def is_unique(string):
-#     seen = set()
+#     char_set = set()
 
 #     for char in string:
-#         if char in seen:
+#         if char in char_set:
 #             return False
 #         else:
-#             seen.add(char)
+#             char_set.add(char)
     
 #     return True
 
