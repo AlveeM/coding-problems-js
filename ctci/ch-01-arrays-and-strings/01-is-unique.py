@@ -1,5 +1,23 @@
 import unittest
 
+# TC: O(n)
+# SC: O(1)
+def is_unique(string):
+    # character set is in ASCII (128 characters)
+    if len(string) > 128:
+        return False
+
+    char_list = [False for _ in range(128)]
+    for char in string:
+        char_idx = ord(char)
+        if char_list[char_idx]:
+            return False
+        char_list[char_idx] = True
+
+    return True
+
+# TC: O(n)
+# SC: O(n)
 # def is_unique(string):
 #     char_dict = {}
     
@@ -12,16 +30,18 @@ import unittest
 
 #     return True
 
-def is_unique(string):
-    seen = set()
+# TC: O(n)
+# SC: O(n)
+# def is_unique(string):
+#     seen = set()
 
-    for char in string:
-        if char in seen:
-            return False
-        else:
-            seen.add(char)
+#     for char in string:
+#         if char in seen:
+#             return False
+#         else:
+#             seen.add(char)
     
-    return True
+#     return True
 
 class Test(unittest.TestCase):
     dataT = [('abcd'), ('s4fad'), ('')]
