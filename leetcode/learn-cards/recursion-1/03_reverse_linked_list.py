@@ -13,14 +13,14 @@ class Solution:
         
         return reversedHead
 
-# class Solution:
-#     def reverseList(self, head: ListNode) -> ListNode:
-#         prevNode = None
+class Solution2:
+    def reverseList(self, head: ListNode) -> ListNode:
+        prev_node = None
 
-#         while head.next:
-#             next_node = head.next
-#             head.next = prevNode
-#             prevNode = head
-#             head = next_node
-
-#         return head
+        while head:
+            cur_node = head
+            head = head.next
+            cur_node.next = prev_node
+            prev_node = cur_node
+        
+        return prev_node
