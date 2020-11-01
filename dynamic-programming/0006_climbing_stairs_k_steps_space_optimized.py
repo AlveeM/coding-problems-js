@@ -20,7 +20,7 @@ def climb_stairs_k_steps(n, k):
     return dp[n % k]
 
 class Test(unittest.TestCase):
-    '''Test Cases: (n, expected)'''
+    '''Test Cases: (n, k, expected)'''
     data = [
         (3, 2, 3),
         (5, 2, 8),

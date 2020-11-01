@@ -8,6 +8,8 @@ Climbing Stairs (k steps, space optimized, skip red steps)
 	In how many distinct ways can you climb to the top?
 '''
 
+# TC: O(nk)
+# SC: O(k)
 def climb_stairs_k_steps_skip_red(n, k, stairs):
     dp = [0] * k
     dp[0] = 1
@@ -23,7 +25,7 @@ def climb_stairs_k_steps_skip_red(n, k, stairs):
     return dp[n % k]
 
 class Test(unittest.TestCase):
-    '''Test Cases: (n, expected)'''
+    '''Test Cases: (n, k, stairs, expected)'''
     data = [
         (7, 3, [False, True, False, True, True, False, False], 2),
     ]
