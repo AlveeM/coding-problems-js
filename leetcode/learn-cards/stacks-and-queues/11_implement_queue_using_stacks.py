@@ -36,4 +36,4 @@ class MyQueue:
         """
         Returns whether the queue is empty.
         """
-        return not self.enq_stack and self.deq_stack
+        return not self.enq_stack and not self.deq_stack
