@@ -103,7 +103,7 @@ class Test(unittest.TestCase):
 
     def test_zero_matrix(self):
         for [test_matrix, expected] in self.data:
-            actual = zero_matrix(test_matrix)
+            actual = zero_matrix1(test_matrix)
             self.assertEqual(actual, expected)
 
 if __name__ == "__main__":
