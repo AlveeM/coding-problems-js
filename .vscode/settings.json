@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/alvee/.pyenv/versions/3.8.3/bin/python",
+    "python.pythonPath": "/usr/local/bin/python3",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "python.linting.mypyEnabled": false
