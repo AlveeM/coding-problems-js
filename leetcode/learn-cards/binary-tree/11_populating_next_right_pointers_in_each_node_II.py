@@ -1,16 +1,22 @@
+from collections import deque
+
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    def connect(self, root: 'Node') -> 'Node':
         if not root: return None
-        if root.val == p.val or root.val == q.val:
-            return root
         
-        left = self.lowestCommonAncestor(root.left, p, q)
-        right = self.lowestCommonAncestor(root.right, p, q)
+        q = deque()
+        q.append(root)
         
-        if left and right:
-            return root
+        while q:
+            level = []
+            for _ in range(len(q)):
+                node = q.popleft()
+                level.append(node)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            for i in range(len(level) - 1):
+                level[i].next = level[i+1]
         
-        if not left and not right:
-            return None
-        
-        return left or right
+        return root
