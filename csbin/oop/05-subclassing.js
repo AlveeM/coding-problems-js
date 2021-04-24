@@ -24,7 +24,7 @@ const adminFunctionStore = {
 function adminFactory(name, score) {
   const admin = userFactory(name, score);
   admin.type = "Admin";
-  Object.setPrototypeOf(admin, adminFunctionStore);
+  admin.__proto__ = adminFunctionStore;
   return admin;
 }
 
